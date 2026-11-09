@@ -1,0 +1,103 @@
+﻿# .NET
+bin/
+obj/
+*.user
+*.suo
+*.userprefs
+.vs/
+.vscode/launch.json
+artifacts/
+*.nupkg
+*.snupkg
+
+# Node / Vite
+node_modules/
+dist/
+build/
+.vite/
+*.tsbuildinfo
+.eslintcache
+
+# Environment files (SECRETS)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+appsettings.Development.json
+appsettings.Local.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+
+# Build artifacts / temp
+_backup*/
+_broken*/
+_working_state*/
+_final_fix*/
+_*backup*/
+_maint_*/
+_qr_*/
+_softdel_*/
+_dmgattr_*/
+fix_relations_*/
+_fix_*/
+archives/
+temp/
+tmp/
+
+# Cloudflared / tunnel
+cloudflared.exe
+public_url.txt
+_cloudflared.log
+
+# Test / diagnostic files
+FINAL-DIAG-*.txt
+health_backend_*.log
+LAST_*.txt
+run_*.log
+verify_run*.log
+_backend*.log
+_fe*.log
+_be*.log
+
+# Error log files
+*.log.err
+*.err
+_be*.log*
+_fe*.log*
+_backend*.log*
+
+# .env files (may API URLs/keys)
+.env
+.env.*
+!.env.example

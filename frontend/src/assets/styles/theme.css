@@ -1,0 +1,51 @@
+:root {
+  /* JRMSU Institutional Brand Colors */
+  --color-jrmsu-gold: #f59e0b;
+  --color-jrmsu-gold-hover: #d97706;
+  --color-jrmsu-blue: #1e3a8a;
+  --color-jrmsu-blue-dark: #172554;
+  --color-jrmsu-cyan: #06b6d4;
+  --color-jrmsu-cyan-glow: rgba(6, 182, 212, 0.35);
+  
+  /* Telemetry & System Status Indicators */
+  --color-status-optimal: #10b981;
+  --color-status-warning: #f59e0b;
+  --color-status-critical: #ef4444;
+  --color-status-offline: #64748b;
+
+  /* Typography Families */
+  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-mono: 'JetBrains Mono', monospace;
+
+  /* Elevated Glass Surface Tokens */
+  --surface-glass-bg: rgba(15, 23, 42, 0.85);
+  --surface-glass-border: rgba(51, 65, 85, 0.6);
+  --surface-card-hover: rgba(30, 41, 59, 0.9);
+
+  /* Animation Timings */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark Mode Theme Structural Overrides */
+.dark {
+  color-scheme: dark;
+  --bg-app: #020617;
+  --text-primary: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-subtle: #1e293b;
+}
+
+/* Utility Animations for Status Indicators & Telemetry Gauges */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 8px var(--color-jrmsu-cyan-glow);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.6);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite ease-in-out;
+}

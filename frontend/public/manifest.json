@@ -1,0 +1,46 @@
+{
+  "short_name": "LabTrack",
+  "name": "JRMSU LabTrack - Computer Laboratory Management System",
+  "description": "Enterprise Computer Laboratory Asset Management, QR Access, and AI Analytics Platform for JRMSU",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#090d16",
+  "background_color": "#090d16",
+  "orientation": "portrait-primary",
+  "categories": ["education", "productivity", "utilities"],
+  "shortcuts": [
+    {
+      "name": "Scan Workstation QR",
+      "short_name": "Scan QR",
+      "description": "Quickly scan workstation or asset QR code",
+      "url": "/scan",
+      "icons": [{ "src": "logo192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Instructor Hub",
+      "short_name": "Reservations",
+      "description": "Access lab reservations and attendance",
+      "url": "/instructor",
+      "icons": [{ "src": "logo192.png", "sizes": "192x192" }]
+    }
+  ]
+}
