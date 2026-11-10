@@ -58,6 +58,26 @@ const ProtectedRoute = ({ allowedRole, children }: { allowedRole: string, childr
 
 export default function App() {
   const navigate = useNavigate();
+  // Auto-redirect logged-in users from landing/login pages to their dashboard
+  React.useEffect(() => {
+    const userStr = sessionStorage.getItem("labtrack_user") || localStorage.getItem("labtrack_user");
+    if (!userStr) return;
+    try {
+      const user = JSON.parse(userStr);
+      const path = window.location.pathname;
+      const isLandingOrAuth = path === "/" || path.startsWith("/login") || path.startsWith("/register") || path.startsWith("/forgot-password");
+      if (isLandingOrAuth) {
+        const role = user?.role?.toLowerCase();
+        if (role === "admin") {
+          navigate("/admin", { replace: true });
+        } else if (role === "instructor") {
+          navigate("/instructor", { replace: true });
+        }
+      }
+    } catch {
+      // ignore parse errors
+    }
+  }, [navigate]);
 
   const handleLogout = () => {
     localStorage.removeItem("labtrack_user");
